@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    border:0;
+    font:inherit;
+    font-size:100%;
+    vertical-align:baseline;
+}
+
+.wrapper {
+    min-width:320px;
+    width:100%;
+    font-family:Yaldevi,sans-serif;
+    font-size:16px;
+    background-color:#fff;
+    min-height:100vh;
+}
+
+.todo-wrap {
+    background:linear-gradient(120deg,#a49fff,#ff99cc 43%,#00d4ff);
+    min-height:100vh;
+}
+
+.todo-container,.todo-wrap {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    box-shadow: 0 0 18px 5px rgba(0, 102, 102, .7);
+}
+
+.todo-container {
+    max-width:750px;
+    flex-direction:column;
+    padding:50px;
+    background:hsla(0,0%,100%,.4);
+
+}
+
+.look {
+    margin-bottom: 45px;
+}
+
+.eye {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    /*border: 0.5px solid #000000;*/
+    height: 30px;
+    width: 30px;
+    background: #e6ffff;
+}
+
+.eye:after {
+    position: absolute;
+    bottom: 17px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background: #000000;
+    border-radius: 50%;
+    content: " ";
+}
+
+.todo-add {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    padding-bottom:50px;
+}
+
+.todo-add a {
+    width:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    background:#0288ff;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.todo-add a,.todo-add input {
+    height:50px;
+    font-size:20px;
+    border-radius:8px;
+    border:1px solid #fff;
+}
+
+.todo-add input {
+    width:calc(100% - 100px);
+    background:hsla(0,0%,100%,.3);
+    backdrop-filter:blur(10px);padding:10px;color:#000000;
+}
+
+input:focus {
+     outline: none;
+ }
+
+.todo-item {
+    padding-left:20px;
+    padding-right:20px;
+    height:50px;
+    justify-content:space-between;
+    border-radius:8px;border:1px solid #fff;
+}
+
+.todo-item,.todo-item-wrap {
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+
+.todo-item-wrap {
+    justify-content:center;
+    flex-direction:column;
+}
+
+.todo-item-wrap .todo-item+.todo-item {
+    margin-top:20px;
+}
+
+.todo-item.done .content {
+    text-decoration:line-through;
+}
+
+input:disabled {
+    background: transparent;
+}
+
+.todo-item input {
+    background: transparent;
+}
+
+.todo-item .todo-item-controls svg{
+    margin-bottom: 3px;
+}
